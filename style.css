@@ -1,0 +1,15 @@
+/*#input{
+    display: flex;
+    flex-direction: row;
+}*/
+
+#display > input{
+    height: 200px;
+    width: 100%;
+}
+
+#input > div > input{
+    height: 100px;
+    width: 100px;
+    
+}

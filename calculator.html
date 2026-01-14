@@ -8,45 +8,61 @@
 </head>
 <body>
     <header>
-
+        <div id="test"></div>
     </header>
     <main>
         <div id="display">
-            <input type="text" name="display">
+            <input id="output" type="text" name="display">
         </div>
         <div id="input">
             <div>
-                <input type="button" value="DEL">
-                <input type="button" value="AC">
-                <input type="button" value="%">
-                <input type="button" value="÷">
+                <input type="button" class="negmodifiers" value="DEL" onclick="del()">
+                <input type="button" class="negmodifiers" value="AC" onclick="getElementById('output').value = ''">
+                <input type="button" value="%" onclick="getElementById('output').value += '%'">
+                <input type="button" value="÷" onclick="getElementById('output').value += '/'">
             </div>
             <div>
-                <input type="button" value="7">
-                <input type="button" value="8">
-                <input type="button" value="9">
-                <input type="button" value="x">
+                <input type="button" value="7" onclick="getElementById('output').value += '7'">
+                <input type="button" value="8" onclick="getElementById('output').value += '8'">
+                <input type="button" value="9" onclick="getElementById('output').value += '9'">
+                <input type="button" value="x" onclick="getElementById('output').value += '*'">
             </div>
             <div>
-                <input type="button" value="4">
-                <input type="button" value="5">
-                <input type="button" value="6">
-                <input type="button" value="-">
+                <input type="button" value="4" onclick="getElementById('output').value += '4'">
+                <input type="button" value="5" onclick="getElementById('output').value += '5'">
+                <input type="button" value="6" onclick="getElementById('output').value += '6'">
+                <input type="button" value="-" onclick="getElementById('output').value += '-'">
             </div>
             <div>
-                <input type="button" value="1">
-                <input type="button" value="2">
-                <input type="button" value="3">
-                <input type="button" value="+">
+                <input type="button" value="1" onclick="getElementById('output').value += '1'">
+                <input type="button" value="2" onclick="getElementById('output').value += '2'">
+                <input type="button" value="3" onclick="getElementById('output').value += '3'">
+                <input type="button" value="+" onclick="getElementById('output').value += '+'">
             </div>
             <div>
-                <input type="button" value="0">
-                <input type="button" value=".">
-                <input type="button" value="=">
+                <input type="button" value="0" onclick="getElementById('output').value += '0'">
+                <input type="button" value="." onclick="getElementById('output').value += '.'">
+                <input type="button" value="=" onclick="equal()">
             </div>
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script>
+
+        function equal(){
+
+            let sumText = document.getElementById('output').value;
+            let sum = eval(sumText);
+            console.log(sum);
+            document.getElementById('output').value = sum;
+        }
+
+        function del(){
+            let str = document.getElementById('output').value;
+            let modstr = str.slice(0, -1);
+            document.getElementById('output').value = modstr;
+        }
+
+    </script>
 </body>
 </html>

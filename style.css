@@ -3,13 +3,43 @@
     flex-direction: row;
 }*/
 
-#display > input{
-    height: 200px;
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#display{
+    height: 150px;
     width: 100%;
+    background-color: red;
+}
+
+#display > input{
+    box-sizing: border-box;
+    height:100%;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: right;
 }
 
 #input > div > input{
     height: 100px;
     width: 100px;
-    
+    font-size: 25px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+#input > div:nth-child(5) > input:nth-child(3){
+    width: 210px;
+    border-radius: 50px;
+}
+
+main{
+    background-color: black;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -18,31 +18,31 @@
             <div>
                 <input type="button" class="negmodifiers" value="DEL" onclick="del()">
                 <input type="button" class="negmodifiers" value="AC" onclick="getElementById('output').value = ''">
-                <input type="button" value="%" onclick="getElementById('output').value += '%'">
-                <input type="button" value="÷" onclick="getElementById('output').value += '/'">
+                <input type="button" class="operators" value="%" onclick="getElementById('output').value += '%'">
+                <input type="button" class="operators" value="/" onclick="getElementById('output').value += '/'">
             </div>
             <div>
-                <input type="button" value="7" onclick="getElementById('output').value += '7'">
-                <input type="button" value="8" onclick="getElementById('output').value += '8'">
-                <input type="button" value="9" onclick="getElementById('output').value += '9'">
-                <input type="button" value="x" onclick="getElementById('output').value += '*'">
+                <input type="button" class="numbers" value="7" onclick="getElementById('output').value += '7'">
+                <input type="button" class="numbers" value="8" onclick="getElementById('output').value += '8'">
+                <input type="button" class="numbers"value="9" onclick="getElementById('output').value += '9'">
+                <input type="button" class="operators" value="*" onclick="getElementById('output').value += '*'">
             </div>
             <div>
-                <input type="button" value="4" onclick="getElementById('output').value += '4'">
-                <input type="button" value="5" onclick="getElementById('output').value += '5'">
-                <input type="button" value="6" onclick="getElementById('output').value += '6'">
-                <input type="button" value="-" onclick="getElementById('output').value += '-'">
+                <input type="button" class="numbers" value="4" onclick="getElementById('output').value += '4'">
+                <input type="button" class="numbers" value="5" onclick="getElementById('output').value += '5'">
+                <input type="button" class="numbers" value="6" onclick="getElementById('output').value += '6'">
+                <input type="button" class="operators" value="-" onclick="getElementById('output').value += '-'">
             </div>
             <div>
-                <input type="button" value="1" onclick="getElementById('output').value += '1'">
-                <input type="button" value="2" onclick="getElementById('output').value += '2'">
-                <input type="button" value="3" onclick="getElementById('output').value += '3'">
-                <input type="button" value="+" onclick="getElementById('output').value += '+'">
+                <input type="button" class="numbers" value="1" onclick="getElementById('output').value += '1'">
+                <input type="button" class="numbers" value="2" onclick="getElementById('output').value += '2'">
+                <input type="button" class="numbers" value="3" onclick="getElementById('output').value += '3'">
+                <input type="button" class="operators" value="+" onclick="getElementById('output').value += '+'">
             </div>
             <div>
-                <input type="button" value="0" onclick="getElementById('output').value += '0'">
-                <input type="button" value="." onclick="getElementById('output').value += '.'">
-                <input type="button" value="=" onclick="equal()">
+                <input type="button" class="numbers" value="0" onclick="getElementById('output').value += '0'">
+                <input type="button" class="numbers" value="." onclick="getElementById('output').value += '.'">
+                <input type="button" class="operators" value="=" onclick="equal()">
             </div>
         </div>
     </main>
@@ -53,7 +53,7 @@
 
             let sumText = document.getElementById('output').value;
             let sum = eval(sumText);
-            console.log(sum);
+            console.log(sumText + '=' + sum);
             document.getElementById('output').value = sum;
         }
 

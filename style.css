@@ -1,35 +1,65 @@
-/*#input{
-    display: flex;
-    flex-direction: row;
-}*/
+:root{
+    --negmod-color: #aa1515;
+    --operator-color: #00b487;
+    --main-color: #002333;
+    --backgorund-color: #002333;
+    --btn-color: #002333 /*#002231*/;
+}
+
+.operators{
+    color: var(--operator-color);
+}
+
+.negmodifiers{
+    color: var(--negmod-color);
+}
+
+.numbers{
+    color: whitesmoke;
+}
+
+*{
+    border: none;
+}
 
 body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--backgorund-color);
 }
 
 #display{
-    height: 150px;
+    height: 100px;
     width: 100%;
-    background-color: red;
 }
 
 #display > input{
+    padding: 10px;
     box-sizing: border-box;
     height:100%;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-bottom: 10px;
     text-align: right;
+    font-size: 2rem;
+    color: whitesmoke;
+    box-shadow: 1px 1px 2px 0px #000000 inset;
+    background-color: var(--main-color);
+}
+
+#input{
+    margin-top: 10px;
 }
 
 #input > div > input{
     height: 100px;
     width: 100px;
-    font-size: 25px;
+    font-size: 1.5rem;
     border-radius: 50%;
     margin: 5px;
+    background-color: var(--main-color);
+    box-shadow: 1px 1px 2px 0px #00000077;
 }
 
 #input > div:nth-child(5) > input:nth-child(3){
@@ -38,8 +68,16 @@ body{
 }
 
 main{
-    background-color: black;
+    padding: 20px;
+    background-color: var(--main-color);
+    border: 0px;
+    border-radius: 40px;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 1px 1px 2px 0px #00000077;
+}
+
+.numbers{
+
 }
